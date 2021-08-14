@@ -1,0 +1,87 @@
+body {
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto 1fr auto ;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        gap: 5px;
+}
+
+ 
+
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    grid-template-areas: 
+    'P1'
+    'P1'
+    'P2' 
+    'P3'
+    'P4';
+}
+
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+
+.P1{
+    grid-area: P1;
+    background-image: url(../images/wear.jpg);
+    height: 400px;
+    background-size: cover;
+}
+
+.P2{
+    grid-area: P2;
+    background-image: url(../images/handbags.jpg);
+    background-size: cover;
+    height: 175px;
+}
+.P3{
+    grid-area: P3;
+    background-image: url(../images/watch.jpg);
+    background-size: cover;
+    height: 175px;
+}
+.P4{
+    grid-area: P4;
+    background-image: url(../images/shoes.jpg);
+    background-size: cover;
+    height: 175px;
+}
+
+.container-component {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 25px;
+}
+
+@media (min-width:900px) {
+    
+    header {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 3fr auto;
+        grid-template-areas: 
+        'P1 P1 P1'
+        'P1 P1 P1'
+        'P1 P1 P1'
+        'P2 P3 P4';
+    }
+
+    .container-component {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+        
+    }
+    
+}
